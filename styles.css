@@ -1,0 +1,118 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: radial-gradient(circle at top, #141e30, #243b55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid #00ffff;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 20px #00ffff80;
+  position: relative;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  background: linear-gradient(180deg, #0090ff, #0077ff);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  padding: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00ffff;
+}
+
+/* Overlay styling */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background: #1e2a3a;
+  border: 2px solid #00ffff;
+  border-radius: 15px;
+  padding: 40px;
+  text-align: left;
+  box-shadow: 0 0 20px #00ffff80;
+  width: 500px;
+  max-width: 90%;
+}
+
+.popup h2 {
+  text-align: center;
+  margin-top: 0;
+  color: #00ffff;
+}
+
+.checkbox-list {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.popup-buttons {
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.output {
+  margin-top: 25px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  min-height: 100px;
+  white-space: pre-line;
+  font-size: 1rem;
+}
+
+footer {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
