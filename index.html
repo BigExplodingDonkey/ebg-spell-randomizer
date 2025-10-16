@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spell Randomizer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>✨ Spell Randomizer ✨</h1>
+
+    <div class="buttons">
+      <button id="btnElement">🎲 Random Element</button>
+      <button id="btnMove">🎯 Randomized Move</button>
+      <button id="btnMoveNoUlt">🚫 Randomized Move (No Ultimates)</button>
+      <button id="btnSet">🪄 Randomized Set</button>
+    </div>
+
+    <!-- Popup overlay for spell type selection -->
+    <div class="overlay" id="overlay">
+      <div class="popup">
+        <h2>Select up to 5 spell types</h2>
+        <div class="checkbox-list" id="checkboxList"></div>
+        <div class="popup-buttons">
+          <button id="confirmBtn">Confirm</button>
+          <button id="cancelBtn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="output" id="output">Select an option to begin.</div>
+
+    <footer>
+      <p>Made by BigExplodingDonkey</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
