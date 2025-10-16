@@ -270,7 +270,7 @@ function generateSet(types) {
   types.forEach(cat => {
     const entries = Object.entries(spells[cat]);
     const [spell, elem] = entries[Math.floor(Math.random() * entries.length)];
-    output += `<b>${cat.toUpperCase()}:</b> ${spell} [${elem}]\n`;
+    output += `${cat.toUpperCase()}: ${spell} [${elem}]\n`;
   });
   displayOutput(output);
 }
