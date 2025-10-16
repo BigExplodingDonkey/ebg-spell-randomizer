@@ -266,7 +266,7 @@ function closePopup() {
 }
 
 function generateSet(types) {
-  let output = "🎒 Your Randomized Spell Set:\n";
+  let output = "🎯 Your Randomized Spell Set:\n";
   types.forEach(cat => {
     const entries = Object.entries(spells[cat]);
     const [spell, elem] = entries[Math.floor(Math.random() * entries.length)];
