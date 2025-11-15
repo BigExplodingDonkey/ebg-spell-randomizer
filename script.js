@@ -1,3 +1,11 @@
+function saveCheckboxState(selectedTypes) {
+  localStorage.setItem("selectedSpellTypes", JSON.stringify(selectedTypes));
+}
+
+function loadCheckboxState() {
+  return JSON.parse(localStorage.getItem("selectedSpellTypes")) || [];
+}
+
 const spells = {
   "Single Projectile": { 
     "Great Fire Blast": "Fire", 
@@ -220,6 +228,8 @@ function openTypeSelector() {
   const list = document.getElementById("checkboxList");
   list.innerHTML = "";
 
+  const saved = loadCheckboxState(); // pull last saved choices
+
   Object.keys(spells).forEach(type => {
     const wrapper = document.createElement("div");
     wrapper.className = "checkbox-item";
@@ -228,6 +238,10 @@ function openTypeSelector() {
     checkbox.type = "checkbox";
     checkbox.id = type;
     checkbox.value = type;
+
+    // apply stored state
+    checkbox.checked = saved.includes(type);
+    
     checkbox.addEventListener("change", limitCheckboxes);
 
     const label = document.createElement("label");
@@ -257,6 +271,10 @@ function confirmTypes() {
     alert("Please select at least one type!");
     return;
   }
+
+  // store selection
+  saveCheckboxState(selected);
+  
   closePopup();
   generateSet(selected);
 }
